@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #content{width:100%;height:500px;background:#999}
+    </style>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        //入口函数
+        $(function () {
+            //定时器，3秒后执行
+            setTimeout(adShow,3000);
+            //定时器，8秒后执行
+            setTimeout(adHide,8000);
+        });
+        function adShow() {
+            $("#ad").slideDown("slow");
+        }
+
+        function adHide() {
+            $("#ad").slideUp("slow");
+        }
+    </script>
+</head>
+<body>
+    <div id="ad" style="display: none;">
+        <img src="img/adv.jpg" style="width: 100%;" alt="">
+    </div>
+
+    <div id="content">正文部分</div>
+</body>
+</html>
